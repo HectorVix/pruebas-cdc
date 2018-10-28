@@ -1,20 +1,13 @@
 import { Component  } from '@angular/core';
 import {MatSelectModule} from '@angular/material/select';
-export interface Food {
-  value: string;
-  viewValue: string;
-}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent   {
-  foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
-  ];
+
   title = 'app';
   optionsSelect: Array<any>;
   // data supplied to the data table
