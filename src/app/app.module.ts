@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule ,NO_ERRORS_SCHEMA  } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { FormGroup, Validators, FormBuilder,ReactiveFormsModule  } from '@angular/forms';
+import { FormGroup, Validators, FormBuilder,ReactiveFormsModule ,FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { AppComponent } from './app.component';
+import { AppComponent ,DialogOverviewExampleDialog } from './app.component';
 import { LoginformComponent } from './loginform/loginform.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSelectModule} from '@angular/material/select';
@@ -18,15 +18,13 @@ import { MatButtonModule, MatCheckboxModule, MatDialogModule, MatFormFieldModule
 @NgModule({
   declarations: [
     AppComponent,
-    LoginformComponent
+    LoginformComponent,DialogOverviewExampleDialog
   ],
   imports: [
     BrowserModule ,
     MDBBootstrapModule.forRoot(),
     BrowserAnimationsModule,
-    MatFormFieldModule,MatSelectModule,
-    BrowserAnimationsModule,
-    BrowserModule,
+    MatSelectModule,
     ReactiveFormsModule,
     HttpClientModule,
     MatButtonModule,
@@ -35,16 +33,12 @@ import { MatButtonModule, MatCheckboxModule, MatDialogModule, MatFormFieldModule
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    ModalGalleryModule.forRoot() 
-
-
-    
-    
-
+    ModalGalleryModule.forRoot() ,FormsModule
     
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
+  entryComponents: [AppComponent, DialogOverviewExampleDialog],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
